@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/vue.js"></script>
+	</head>
+	<body><!--数据绑定-->
+		<div id="app">
+			<input type="text" v-model="msg">
+			<p v-on:click="onclick">按钮</p>
+		</div>
+		<script type="text/javascript">
+			var vue = new Vue({
+				el: "#app",
+				data: {
+					msg:'',
+					content: true
+					
+				},
+				methods:{
+					onclick:function(){
+						alert(this.msg);
+						
+					}
+				}
+			})
+		</script>
+	</body>
+</html>

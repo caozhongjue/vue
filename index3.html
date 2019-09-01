@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/vue.js"></script>
+	</head>
+	<body><!--数据绑定-->
+		<div id="app">
+			<!--<p v-if="content">{{msg}}</p>
+			<p v-else="content">hello vue 开始了</p>-->
+			<p v-if="type === 'a'">a</p>
+			<p v-else-if="type === 'b'">b</p>
+			<p v-else="type === 'c'">c</p>
+		</div>
+		<script type="text/javascript">
+			var vue = new Vue({
+				el: "#app",
+				data: {
+					msg: "你好vue.js",
+					content: false,
+					type: 'a'
+				}
+			})
+		</script>
+	</body>
+</html>

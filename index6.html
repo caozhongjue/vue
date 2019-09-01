@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/vue.js"></script>
+	</head>
+	<body><!--数据绑定-->
+		<div id="app">
+			<p v-on:click="onclick">点我试试</p>
+			<p  v-show="content">你好vue</p>
+		</div>
+		<script type="text/javascript">
+			var vue = new Vue({
+				el: "#app",
+				data: {
+					msg: "你好vue.js",
+					content: true
+					
+				},
+				methods:{
+					onclick:function(){
+						//alert("hello vue");
+						this.content= !this.content
+					}
+				}
+			})
+		</script>
+	</body>
+</html>
